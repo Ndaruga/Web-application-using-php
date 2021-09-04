@@ -1,14 +1,17 @@
 
-
 <?php
 include "header.php";
 ?>
 
-<div class="main">
-    <h1>The body</h1>
+
+<div class="content">
+    <h1>WELCOME HOME</h1>
+    <h2>I am a web Designer</h2>
 </div>
 
 
 <?php
 include "footer.php";
 ?>
+
+
