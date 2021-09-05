@@ -1,25 +1,50 @@
-//slider
+/** Image slider */
 var slider = document.getElementById("slideImg");
 
 var images = new Array(
-    "../Private/Assets/images/aesthetic-winter-landscape-1mbhrurfuvlbakqy.jpg",
-    "../Private/Assets/images/bubbles-230014__480.jpg",
-    "../Private/Assets/images/milky-way-2695569__480.jpg",
-    "../Private/Assets/images/mountain-riverside-during-winter-ub7pi6eo4r4tokb5.jpg",
-    "../Private/Assets/images/pexels-photo-2486168.jpeg",
-    "../Private/Assets/images/sky-and-winter-mountains-cazoirddldrab8xa.jpg",
-    "../Private/Assets/images/stars-2643089__480.jpg",
-    "../Private/Assets/images/winter-house-on-snow-21czcthzivnc36yv.jpg"
+    "../Private/Assets/images/abstract-2891890__340.jpg",
+    "../Private/Assets/images/website-3374825__340.jpg",
+    "../Private/Assets/images/images (2).jpeg",
+    "../Private/Assets/images/images (3).jpeg",
+    "../Private/Assets/images/images.jpeg",
+    "../Private/Assets/images/web-1012467__340.jpg",
+    "../Private/Assets/images/web-design-2906159__340.jpg",
+    "../Private/Assets/images/wordpress-581849_960_720.jpg"
 );
 
 var imageLength = images.length;
 var i = 0;
 
-function slideImages(){
+function imageSlider(){
     if(i > imageLength-1){
         i = 0;
     }
     slider.src = images[i];
     i++;
-    setTimeout('slideImages()', 5000);
-}
+    setTimeout('imageSlider()', 5000);
+};
+
+
+
+
+const text = ["web designer.","software developer.","Network designer.","freelancer."];   
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function dynamicText(){
+    if(count === text.length){
+        count = 0;
+    }
+    currentText = text[count];
+    letter = currentText.slice(0, ++index);
+
+    document.querySelector(".dynamic_text").textContent = letter;
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
+    }
+    setTimeout(dynamicText, 250);
+})();
+
