@@ -1,5 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@1,100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 *{
     box-sizing: border-box;
@@ -8,27 +9,35 @@
     font-family: 'kumbh Sans', sans-serif;
     scroll-behavior: smooth;
 }
-body{
-    overflow: hidden;
+.footer {
+    position: fixed;
+    display: flex;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    justify-content: center;
 }
 
 @media screen and (min-device-width: 1300px) {
     .main-section{
         height: 100vh;
-        min-width: 1300px;
-        position: relative;
+        min-width: 100vw;
+        position: fixed;
         overflow: hidden;
     }
 
     .background_banner{
         position: relative;
-        height: 90vh;
-        min-width: 1300px;
+        height: 100vh;
+        min-width: 100vw;
     }
     .slider{
-        position: absolute;
-        height: 90vh;
-        min-width: 1300px;
+        position: fixed;
+        height: 100vh;
+        min-width: 100vw;
     }
     #slideImg{
         position: inherit;
@@ -53,28 +62,28 @@ body{
         }
     }
     .image-banner{
-        min-width: 100%;
+        min-width: 100vw;
         min-height: 100vh;
         background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
-        position: absolute;
-        top: 0;
+        position: relative;
     }
     /*Nav bar*/
     .navbar {
-        background: rgba(0,0,0,0.2);
-        height: 12vh;
+        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+        max-height: 12vh;
         display: flex;
         justify-content: center;
         align-items: center;
         font-size: 1.2rem;
-        position: absolute;
+        position: fixed;
         top: 0;
+        left: 0;
         z-index: 999;
-        width: 100vw;
+        min-width: 100vw;
     }
 
 
-    nav.container{
+    nav .container{
         display: flex;
         justify-content: space-between;
         height: 80px;
@@ -119,7 +128,7 @@ body{
 
     .navbar_item{
         height: 20px;
-        width: 100px;
+        width: auto;
         justify-content: center;
         align-items: center;
     }
@@ -134,7 +143,7 @@ body{
         font-family: ubuntu;
         font-size: 1.2em;
         height: 80%;
-        margin-right: 1px;
+        margin-right: 2px;
         padding: 10px;
 
     }
@@ -171,8 +180,23 @@ body{
         transition: all .3s ease-in-out;
         border-bottom: 3px solid #f00;
     }
+    .content_section{
+        width: 100vw;
+        max-height: 100vh;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    section .image-banner{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+    }
 
-    .content{
+    .home_content{
         color: #fff;
         position: absolute;
         display: inline-block;
@@ -181,21 +205,21 @@ body{
         justify-content: center;
         align-items: center;
     }
-    .content h1{
+    .home_content h1{
         font-size: 2.5em;
         font-family: acme;
         justify-content: center;
         display: flex-start;
         
     }
-    .content h1 span{
+    .home_content h1 span{
         color: rgb(132, 17, 226);
         font-weight: bolder;
         font-family: acme;
         margin-left: 13px;
 
     }
-    .content .text{
+    .home_content .text{
         display: flex;
         margin-top: 40px;
     }
@@ -238,6 +262,118 @@ body{
             /* margin: 0 -25px 10px 35px; */ 
         }
     }
+    /* About me page */
+    .about_content{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        color: ivory;
+        background: transparent;
+        height: auto;
+        padding-bottom: 20px;
+    }
+    /* services page */
+    .services_content{
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        color: ivory;
+        background: transparent;
+        height: auto;
+        padding-bottom: 20px;
+
+    }
+    .service_title{
+        color: rgb(255, 255, 255);
+        padding: 10px;
+        margin-bottom: 20px;
+        text-transform: capitalize;
+        font-size: 3em;
+        word-spacing: 5px;
+    }
+    .services_content .service_offered{
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .flip-card {
+        background-color: transparent;
+        width: 250px;
+        height: 300px;
+        perspective: 1000px;
+        margin: 10px;
+    }
+    
+    .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+    
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+    
+    .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+    
+    #web-dev .flip-card-front .flip-card-front {
+        background-image: url(../../Private/Assets/images/website-3374825__340.jpg);
+        /* color: black; */
+
+    }
+    .card-front-banner{
+        position: relative;
+        height: 100%;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+    }
+    .card-front-banner .card-title{
+        word-wrap: normal;
+        color: greenyellow;
+        position: absolute;
+        padding: 15px;
+        top: 30%;
+    }
+
+    
+    .flip-card-back {
+        background: black;
+        color: #fff;
+        transform: rotateY(180deg);
+        padding: 20px;
+    }
+    .flip-card-back .contact_link{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 1.5em;
+    }
+        .flip-card-back .contact_link a{
+            text-decoration: none;
+            text-align: center;
+            color: blue;
+        }
+        .flip-card-back .contact_link a:hover{
+            color: cornsilk;
+        }
+
 }
 
 @media screen and (max-device-width: 320px){
