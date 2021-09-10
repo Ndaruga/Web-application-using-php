@@ -2,7 +2,7 @@
 <?php
 include "header.php";
 ?>
-<div class="content_section">
+<div class="content_section" style="scroll-behavior: smooth;">
     <section id="home">
         <div class="image-banner">
             <div class="home_content">
@@ -19,27 +19,23 @@ include "header.php";
         <div class="image-banner">
             <div class="about_content">
                 <h2>About Me</h2>
-                <div class="profile">
-                    <div>
-                        <p><strong>Hello?</strong> br My name is <span>Francis.</span>
-                            I am a Backend Web developer, software developer and a networking entusiast.</p>
-                    </div>
-                    <div class="mission">
-                        <h5>career objective</h5>
-                        <p>To build a career in an organization where I would get an opportunity to improve my abilities by accepting challenges, fullfiling the organizational goal(s) though continious learning and commitment</p>
-                    </div>
-                </div>
-                <div class="current_progress">
-                    <h5>Penetration Testing</h5>
-                    <p>I am currently taking a course in penetration Testing so that i can build you more secure websites and softwares.</p>
-                </div>
+                <div class="my_profile">
+                    <h6><strong>Hello? 🙌</strong> <br> My name is <span>Francis.</span></h6>
+                    <br>
+                    <p>I am a Backend Web developer, software developer and a networking entusiast.</p>
+                    <!-- <h5>career objective</h5> -->
+                    <p>My mission is to build a career in an organization where I would get an opportunity to improve my abilities by accepting challenges, fullfiling the organizational goal(s) though continious learning and commitment</p>
+                <br>
+                <span class="current_progress">
+                    <p>Currently, I am taking a course in <span style="color: #ff7200;">penetration Testing</span> so that i can build you more secure websites and softwares.</p>
+                </span>
             </div>
         </div>
     </section>
     <section id="services">
         <div class="image-banner">
             <div class="services_content">
-                <h1 class="service_title">What can i do for you?</h1>
+                <h2 class="service_title">What can i do for you?</h2>
                 <div class="service_offered">
                     <div class="flip-card" id="web-dev">
                         <div class="flip-card-inner">
@@ -49,7 +45,7 @@ include "header.php";
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <p>I create <strong><span style="color: greenyellow;">responsive websites</span></strong> to ensure all your customers feel the quality from any device</p>
+                                <h4>I create <strong><span style="color: #ff7200;">responsive websites</span></strong> to ensure all your customers feel the quality from any device</h4>
                                 <div class="contact_link"><a href="#contact">Contact Me</a></div>
                             </div>
                         </div>
@@ -75,7 +71,7 @@ include "header.php";
                                 </div>
                             </div>
                             <div class="flip-card-back">
-                                <h4>Want to install internet for your personal, business or organizational needs? <br> I am here to take care of that</h4>
+                                <h4>Want to install internet for your personal, business or organizational needs? <br><br> I am here to take care of that</h4>
                                 <div class="contact_link"><a href="#contact">Contact Me</a></div>
                             </div>
                         </div>

@@ -64,12 +64,12 @@
     .image-banner{
         min-width: 100vw;
         min-height: 100vh;
-        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
         position: relative;
     }
     /*Nav bar*/
     .navbar {
-        background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7));
+        background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
         max-height: 12vh;
         display: flex;
         justify-content: center;
@@ -135,7 +135,7 @@
 
 
     .navbar_links{
-        color: rgb(247, 243, 9);
+        color: #fff;
         display: flex;
         align-items: center;
         justify-content: center; 
@@ -268,11 +268,25 @@
         justify-content: center;
         display: flex;
         flex-direction: column;
-        color: ivory;
+        color: #fff;
         background: transparent;
         height: auto;
-        padding-bottom: 20px;
+        margin: 35px auto;
     }
+    .about_content  .my_profile{
+        display: flex;
+        flex-direction: column;
+        font-weight: 500;
+        max-width: 70vw;
+        justify-content: center;
+        font-size: 1.4em;
+    }
+    .about_content  .my_profile h6{
+        font-family: acme;
+        font-size: 1.4rem;
+        word-spacing: 5px;
+    }
+    
     /* services page */
     .services_content{
         align-items: center;
@@ -290,7 +304,7 @@
         padding: 10px;
         margin-bottom: 20px;
         text-transform: capitalize;
-        font-size: 3em;
+        font-size: 2.5em;
         word-spacing: 5px;
     }
     .services_content .service_offered{
@@ -328,11 +342,11 @@
         backface-visibility: hidden;
     }
     
-    #web-dev .flip-card-front .flip-card-front {
+    /* #web-dev .flip-card-front .flip-card-front {
         background-image: url(../../Private/Assets/images/website-3374825__340.jpg);
-        /* color: black; */
+        /* color: black; 
 
-    }
+    } */
     .card-front-banner{
         position: relative;
         height: 100%;
@@ -352,9 +366,16 @@
     
     .flip-card-back {
         background: black;
-        color: #fff;
+        color: #e7ddd5;
         transform: rotateY(180deg);
         padding: 20px;
+        /* backface-visibility: hidden; */
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .flip-card-back h4{
+        text-align: center;
     }
     .flip-card-back .contact_link{
         position: fixed;
@@ -364,6 +385,7 @@
         justify-content: center;
         cursor: pointer;
         font-size: 1.5em;
+        padding: 3px;
     }
         .flip-card-back .contact_link a{
             text-decoration: none;
@@ -372,6 +394,7 @@
         }
         .flip-card-back .contact_link a:hover{
             color: cornsilk;
+            cursor: pointer;
         }
 
 }
