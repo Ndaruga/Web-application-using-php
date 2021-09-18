@@ -22,7 +22,7 @@ include "header.php";
                 <div class="my_profile">
                     <h6><strong>Hello? 🙌</strong> <br> My name is <span>Francis.</span></h6>
                     <br>
-                    <p>I am a Backend Web developer, software developer and a networking entusiast.</p>
+                    <p>I am a Backend Web developer, software developer and a networking enthusiast.</p>
                     <!-- <h5>career objective</h5> -->
                     <p>My mission is to build a career in an organization where I would get an opportunity to improve my abilities by accepting challenges, fullfiling the organizational goal(s) though continious learning and commitment</p>
                 <br>
@@ -104,7 +104,17 @@ include "header.php";
     <section id="contact">
         <div class="image-banner">
             <div class="contact_content">
-                <h2>contact</h2>
+                <h2>Contact Us</h2>
+                <div class="contact_description">
+                    <h4>Let's talk about your Website or project. Send me a message and i will be in touch sooner than later.</h4>
+                </div>
+                <div class="contact-links">
+                    <h5>Get in touch through my social media platforms</h5>
+                    <a href="http://www.google.com"><i class="fa fa-3x fa-google-plus">Google plus</i></a>
+                    <a href="http://www.facebook.com"><i class="fa fa-3x fa-facebook-square">Facebook</i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-3x fa-twitter-square">Twitter</i></a>
+                    <a href="http://www.twitter.com"><i class="fa fa-3x fa-whatsapp-square">Whatsapp</i></a>
+                </div>
             </div>
         </div>
     </section>

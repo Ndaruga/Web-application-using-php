@@ -7,6 +7,7 @@
         <title>i-am-francis</title>
         <link rel="icon" href="../Private/Assets/icon.jpg" type="image/x-icon">
         
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--Normal css-->
         
         <link rel="stylesheet" href="./css/styles.css">
