@@ -6,11 +6,16 @@ include "header.php";
     <section id="home">
         <div class="image-banner">
             <div class="home_content">
-                <h1>HELLO !!</h1>
-                <h1>My name is <span>FRANCIS.</span></h1>
-                <div class="text">
-                    <h1 class="static_text">i'm a</h1>
-                    <a href="#services" style = "cursor: pointer; text-decoration: none;"><h1 class="dynamic_text"></h1></a>
+                <div class="home_text">
+                    <h1>HELLO !!</h1>
+                    <h1>My name is <span>FRANCIS.</span></h1>
+                    <div class="text">
+                        <h1 class="static_text">i'm a</h1>
+                        <a href="#services" style = "cursor: pointer; text-decoration: none;"><h1 class="dynamic_text"></h1></a>
+                    </div>
+                </div>
+                <div class="profile-image">
+
                 </div>
             </div>
         </div>
@@ -67,7 +72,7 @@ include "header.php";
                         <div class="flip-card-inner">
                             <div class="flip-card-front">
                                 <div class="card-front-banner">
-                                    <h3 class="card-title"> Networking Design</h3>
+                                    <h3 class="card-title"> Networking Design</h3> 
                                 </div>
                             </div>
                             <div class="flip-card-back">
@@ -106,15 +111,24 @@ include "header.php";
             <div class="contact_content">
                 <h2>Contact Us</h2>
                 <div class="contact_description">
-                    <h4>Let's talk about your Website or project. Send me a message and i will be in touch sooner than later.</h4>
+                    <h4>Let's talk about your Website or project. <br> Send me a message and i will be in touch sooner than later.</h4>
                 </div>
-                <div class="contact-links">
-                    <h5>Get in touch through my social media platforms</h5>
-                    <a href="http://www.google.com"><i class="fa fa-3x fa-google-plus">Google plus</i></a>
-                    <a href="http://www.facebook.com"><i class="fa fa-3x fa-facebook-square">Facebook</i></a>
-                    <a href="http://www.twitter.com"><i class="fa fa-3x fa-twitter-square">Twitter</i></a>
-                    <a href="http://www.twitter.com"><i class="fa fa-3x fa-whatsapp-square">Whatsapp</i></a>
-                </div>
+                <div class="contact_form_and_links">
+                    <div class="contact-form">
+
+                    </div>
+                    <div class="contact-links">
+                        <div class="contact-link-title">
+                            <h5>Get in touch through my social media platforms</h5>
+                        </div>
+                        <div class="contact_links_redirect">
+                            <a href="http://www.google.com"><i class="fa fa-3x fa-google-plus">Google plus</i></a>
+                            <a href="http://www.facebook.com"><i class="fa fa-3x fa-facebook-square">Facebook</i></a>
+                            <a href="http://www.twitter.com"><i class="fa fa-3x fa-twitter-square">Twitter</i></a>
+                            <a href="http://www.twitter.com"><i class="fa fa-3x fa-whatsapp-square">Whatsapp</i></a>
+                        </div>
+                    </div>
+                </div>                
             </div>
         </div>
     </section>

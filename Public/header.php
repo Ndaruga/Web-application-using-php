@@ -18,13 +18,12 @@
         
     </head>
     <body onload="imageSlider(), textSlogan()">
-
     <div class="main-section">
         <div class="background_banner" id="banner">
             <div class="slider">
                 <img src="" alt="image" id="slideImg">
             </div>
-            <!-- <div class="image-banner"> -->
+            <div class="image-banner">
             <!-- Nav bar section -->
                 <nav class="navbar">
                     <div class="container">

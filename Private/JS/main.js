@@ -26,7 +26,6 @@ function imageSlider(){
 
 
 
-
 const text = ["web designer.","software developer.","Network designer.","freelancer."];   
 let count = 0;
 let index = 0;

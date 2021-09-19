@@ -12,7 +12,7 @@
         </div>
         <br>
         <div>
-            See the <a href="https://www.iamfrancis.com/privacy_policy/">privacy policy</a>
+            See the <a href="https://www.iamfrancis.com/privacy_policy/">Privacy Policy</a>
         </div> 
     </div>  
 </footer>
