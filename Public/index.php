@@ -32,7 +32,7 @@ include "header.php";
                     <p>My mission is to build a career in an organization where I would get an opportunity to improve my abilities by accepting challenges, fullfiling the organizational goal(s) though continious learning and commitment.</p>
                 <br>
                 <span class="current_progress">
-                    <p>Currently, I am taking a course in <span style="color: #ff7200;">penetration Testing</span> so that i can build you more secure websites and softwares.</p>
+                    <!-- <p>Currently, I am taking a course in <span style="color: #ff7200;">penetration Testing</span> so that i can build you more secure websites and softwares.</p> -->
                 </span>
             </div>
         </div>
