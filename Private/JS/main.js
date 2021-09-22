@@ -47,3 +47,5 @@ let letter = "";
     setTimeout(dynamicText, 250);
 })();
 
+AOS.init();
+

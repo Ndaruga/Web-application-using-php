@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>i-am-francis</title>
         <link rel="icon" href="../Private/Assets/icon.jpg" type="image/x-icon">
-        
+        <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!--Normal css-->
         
@@ -15,7 +15,9 @@
         <!-- Bootstrap CSS -->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
         <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
-        
+        <style>
+            html, body { overflow-y: scroll; overflow-x:hidden; position: relative; height: 100%; }
+        </style>
     </head>
     <body onload="imageSlider(), textSlogan()">
     <div class="main-section">
@@ -44,14 +46,14 @@
                                 <a href="#services" class="navbar_links" id="services-page">Services</a>
                             </li>
                             <li class="navbar_item">
-                                <a href="#feedback" class="navbar_links" id="news-page">Feedback</a>
+                                <a href="#feedback" class="navbar_links" id="feedback-page">Feedback</a>
                             </li>
                             <li class="navbar_item">
                                 <a href="#contact" class="navbar_links" id="contact-page">Contact</a>
                             </li>
-                            <li class="navbar_btn">
+                            <!-- <li class="navbar_btn">
                                 <a href="#sign-up" class="button" id="signup">Sign Up</a>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                 </nav>
