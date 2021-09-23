@@ -1193,20 +1193,29 @@
     word-spacing: 4px;
   }
   .services_content .service_offered {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .services_content .service_offered .flip-card {
     background-color: transparent;
     width: 22vw;
     height: 300px;
-    -webkit-perspective: 800px;
-            perspective: 800px;
-    margin: 5px;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    margin: 10px;
   }
-  .flip-card-inner {
+  .services_content .service_offered .flip-card .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1233,34 +1242,28 @@
   }
   .card-front-banner {
     position: relative;
-    height: 100%;
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     display: -ms-grid;
     display: grid;
     place-items: center;
+    height: 100%;
+    width: 100%;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
   .card-front-banner .card-title {
-    word-wrap: normal;
     color: #ff7200;
-    position: absolute;
-    padding: 8px;
-    top: 30%;
-    font-size: 1.4em;
   }
   .flip-card-back {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: black;
     color: #e7ddd5;
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
     padding: 20px;
-    -webkit-backface-visibility: visible;
-            backface-visibility: visible;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1281,7 +1284,7 @@
         -ms-flex-pack: center;
             justify-content: center;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: 1.5em;
     padding: 3px;
   }
   .flip-card-back .contact_link a {
@@ -1952,27 +1955,33 @@
   }
   .services_content .service_title {
     color: white;
-    padding: 10px;
-    margin-bottom: 17px;
+    padding: 8px;
+    margin-bottom: 8px;
     text-transform: capitalize;
-    font-size: 2.4em;
-    word-spacing: 4px;
+    font-size: 1.5em;
+    word-spacing: 3px;
   }
   .services_content .service_offered {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .services_content .service_offered .flip-card {
     background-color: transparent;
-    width: 22vw;
-    height: 300px;
-    -webkit-perspective: 800px;
-            perspective: 800px;
-    margin: 5px;
+    width: 40vw;
+    height: 32vh;
+    -webkit-perspective: 1000px;
+            perspective: 1000px;
+    margin: 10px;
   }
-  .flip-card-inner {
+  .services_content .service_offered .flip-card .flip-card-inner {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1999,34 +2008,28 @@
   }
   .card-front-banner {
     position: relative;
-    height: 100%;
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     display: -ms-grid;
     display: grid;
     place-items: center;
+    height: 100%;
+    width: 100%;
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
   }
   .card-front-banner .card-title {
-    word-wrap: normal;
     color: #ff7200;
-    position: absolute;
-    padding: 8px;
-    top: 30%;
-    font-size: 1.4em;
   }
   .flip-card-back {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5)));
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background: black;
     color: #e7ddd5;
     -webkit-transform: rotateY(180deg);
             transform: rotateY(180deg);
-    padding: 20px;
-    -webkit-backface-visibility: visible;
-            backface-visibility: visible;
+    padding: 8px 20px;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -2036,7 +2039,7 @@
   }
   .flip-card-back h4 {
     text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .flip-card-back .contact_link {
     position: fixed;
