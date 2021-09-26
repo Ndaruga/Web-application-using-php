@@ -2481,7 +2481,7 @@
         grid-template-columns: auto;
     position: absolute;
     top: 12vh;
-    left: 00vh;
+    left: -100%;
     width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
