@@ -111,7 +111,7 @@ include "header.php";
             <div class="contact_content">
                 <h2>Contact Us</h2>
                 <div class="contact_description">
-                    <h4>Let's talk about your next Website or Project.</h4>
+                    <h4>Let's talk about your next Project.</h4>
                 </div>
                 <div class="contact_form_and_links">
                     <div class="contact-form">

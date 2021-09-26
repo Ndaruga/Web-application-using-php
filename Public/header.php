@@ -4,6 +4,8 @@
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Francis King'ori">
+        <meta name="description" content="Francis Kingori or King'ori aka i-am-francis or i am francis or i_am_francis. Web developers Software Engineer Freelancer">
         <title>i-am-francis</title>
         <link rel="icon" href="../Private/Assets/icon.jpg" type="image/x-icon">
         <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">

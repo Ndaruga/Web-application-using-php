@@ -2002,7 +2002,7 @@ $orangeColor: #ff7200;
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 999;
+            z-index: 9;
             min-width: 100vw;
             background: #000;
 
@@ -2020,8 +2020,8 @@ $orangeColor: #ff7200;
                 #navbar__logo{
                     background-color: $orangeColor;
                     font-family: 'Forte';
-                    line-height: 27px;
-                    letter-spacing: 2.2px;
+                    line-height: 16px;
+                    letter-spacing: 1px;
                     background-image: linear-gradient(to top, #f5630e 0%, #faf7f6 100%);
                     background-size: 100%;
                     -webkit-background-clip: text;
@@ -2031,21 +2031,48 @@ $orangeColor: #ff7200;
                     cursor: pointer;
                     text-decoration: none;
                     text-transform: capitalize;
-                    font-size: 1.8rem;
+                    font-size: 1.2rem;
                     position: fixed;
-                    left: 1.5vw;
-                    top: 1.5vh;
+                    left: 1vw;
+                    top: 1vh;
+                    transform: translate(20%, 20%);
+                }
+
+                .navbar__toggle{
+                    .bar{
+                        width: 25px;
+                        height: 3px;
+                        margin: 5px auto;
+                        transition: all 0.3s ease-in-out;
+                        background: #fff;
+                    }
                 }
                 
                 .navbar__menu{
-                    display: flex;
-                    justify-content: flex-end;
-                    align-items: center;
-                    list-style: none;
-                    
+                    // display: flex;
+                    // justify-content: flex-end;
+                    // align-items: center;
+                    // list-style: none;
+                    display: grid;
+                    grid-template-columns: auto;
+                    position: absolute;
+                    top: 12vh;
+                    left: 00vh;
+                    width: 100%;
+                    // opacity: 0;
+                    justify-content: center;
+                    background: #000;
+                    z-index: 999;
+
+                    .active{
+                        background: #000;
+                        left: 0;
+                        opacity: 1;
+                        transition: 0.5s ease;
+                    }
             
                     .navbar_item{
-                        height: 20px;
+                        height: 60px;
                         width: auto;
                         justify-content: space-between;
                         align-items: center;
@@ -2053,19 +2080,20 @@ $orangeColor: #ff7200;
                         .navbar_links{
                             color: #fff;
                             display: flex;
-                            align-items: center;
-                            justify-content: center; 
+                            text-align: center; 
                             text-decoration: none;
                             font-family: ubuntu;
                             font-size: 1.1em;
-                            height: 80%;
-                            margin-right: 2px;
-                            padding: 8px;
+                            line-height: 60px;
+                            padding: 8px 0;
+                            min-width: 100vh;
                         }
             
                         .navbar_links:hover{
-                            color: $orangeColor;
+                            background: $orangeColor;
                             transition: all .3s ease-in-out;
+                            color: #fff;
+                            min-width: 100%;
                         }
                     
                     }
@@ -2136,7 +2164,7 @@ $orangeColor: #ff7200;
         align-items: center;
 
         .home_text h1{
-            font-size: 2.0em;
+            font-size: 1.5em;
             font-family: acme;
             justify-content: center;
             display: flex-start;
@@ -2145,7 +2173,7 @@ $orangeColor: #ff7200;
                 color: rgb(132, 17, 226);
                 font-weight: bolder;
                 font-family: acme;
-                margin-left: 9px;
+                margin-left: 5px;
             }
             
         }
@@ -2156,7 +2184,7 @@ $orangeColor: #ff7200;
     
             h1.static_text{
                 text-transform: uppercase;
-                font-size: 24px;
+                font-size: 20px;
                 color: #fff;
                 font-weight: 200;
                 margin-right: 10px;
@@ -2167,7 +2195,7 @@ $orangeColor: #ff7200;
                 position: relative;
                 list-style: none;
                 color: $orangeColor;
-                font-size: 24px;
+                font-size: 20px;
                 font-weight: 300;
                 font-family: poppins;
                 text-transform: capitalize;
@@ -2240,7 +2268,8 @@ $orangeColor: #ff7200;
         height: auto;
         padding-bottom: 20px;
         min-width: 84vh;
-        position: relative;
+        // position: absolute;
+        // top: 12vh;
 
         .service_title{
             color: rgb(255, 255, 255);
@@ -2354,44 +2383,55 @@ $orangeColor: #ff7200;
         flex-direction: column;
         color: #fff;
         background: transparent;
-        height: auto;
-        margin: 35px;
+        width: 100%;
+        position: absolute;
+        top: 4vh;
 
         h2{
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 5px;
+            font-size: 18px;
         }
 
         .contact_description{
             color: $orangeColor;
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 7px;
+            // white-space: nowrap;
+            justify-content: center;
+            align-items: center;
+            width: 85%;
+            
+            h4{
+                font-size: 14px;
+                text-align: center;
+            }
         }
 
         .contact_form_and_links{
             display: flex;
-            flex-direction: row;
-            max-width: 84vh;
-            justify-content: space-evenly;
+            flex-direction: column;
+            min-width: 80vh;
+            justify-content: center;
             align-items: center;
 
             h2{
-                margin: 10px;
+                margin: 4px;
                 text-transform: uppercase;
-                font-size: 1.6em;
+                font-size: 1em;
                 font-weight: bolder;
                 color: $orangeColor;
             }
 
             .contact-form{
                 height: 60vh;
-                width: 50vw;
+                width: 74vw;
                 background: gray;
                 color: black;
 
                 form{
                     height: 100%;
-                    width: 45vw;
+                    width: 100%;
                     display: flex;
                     flex-direction: column;
                     padding: 20px;
@@ -2399,16 +2439,17 @@ $orangeColor: #ff7200;
                     align-items: center;
 
                     h5{
-                        font-size: 1em;
+                        font-size: .9em;
                         word-wrap: unset;
                     }
                     label{
-                        width: 93%;
-                        margin: 5px 5px;
+                        width: 96%;
+                        margin: 3px 3px;
+                        font-size: 14px;
                     }
                     input{
                         width: 100%;
-                        height: 30px;
+                        height: 25px;
                         font-size: .85em;
                         padding: 3px;
 
@@ -2430,7 +2471,7 @@ $orangeColor: #ff7200;
                         width: 100%;
                         
                         #client_message{
-                            padding: 4px;
+                            padding: 2px;
                         }
                     }
                     button{
@@ -2439,10 +2480,11 @@ $orangeColor: #ff7200;
                         text-transform: uppercase;
                         font-weight: bold;
                         border-radius: 1.5em;
-                        margin-top: 0;
-                        padding: 7px;
+                        margin-top: -2px;
+                        padding: 3px;
                         border: none;
                         min-width: 75%;
+                        font-size: 13px;
                         // margin-bottom: 2vh;
                     }
                 }
@@ -2454,23 +2496,29 @@ $orangeColor: #ff7200;
                 background: #262730 url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/noise-bg.png) repeat 0 0;
                 justify-content: center;
                 align-items: center;
-                height: 60vh;
-                width: 45vw;
+                height: 42vh;
+                width: 100vw;
 
                 .contact-link-title{
-                    margin: 5px 0;
+                    margin: 0 0 -20px;
                     word-wrap: normal;
                     padding: 5px;
                     position: relative;
                     justify-content: center;
-                    align-items: flex-start;
+                    align-items: center;
+                    
+
+                    h5{
+                        text-align: center;
+                        font-size: 16px;
+                    }
 
                 }
                 .links{
                     display: flex;
                 
                 .social-networks {
-                    margin: 10px 0 25px;
+                    margin: 7px;
                     padding: 0;
                     font-size: 0;
                     text-align: center;
@@ -2485,9 +2533,9 @@ $orangeColor: #ff7200;
                     a {
                         display: block;
                         position: relative;
-                        margin: 7px;
-                        width: 58px;
-                        height: 58px;
+                        margin: 8px;
+                        width: 50px;
+                        height: 50px;
                         font-size: 0;
                         line-height: 0;
                         text-align: center;
@@ -2558,8 +2606,8 @@ $orangeColor: #ff7200;
                 
                 .whatsapp-ico{
                     fill: white;
-                    width: 58px;
-                    height: 58px;
+                    width: 50px;
+                    height: 50px;
                     padding: 3px;
                     background-color: #1f2027;
                     border-radius: 50%;
@@ -2570,8 +2618,8 @@ $orangeColor: #ff7200;
                 .whatsapp-ico:hover{
                     background-color: #4dc247;
                     transition: all .2s ease-in-out;
-                    height: 58px;
-                    width: 58px;
+                    height: 50px;
+                    width: 50px;
                     border-radius: 0;
                 }
             }
