@@ -2483,6 +2483,7 @@
     top: 12vh;
     left: -100%;
     width: 100%;
+    opacity: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
