@@ -24,6 +24,20 @@ function imageSlider(){
     setTimeout('imageSlider()', 5000);
 };
 
+/* Navigation bar*/
+const menu = document.querySelector("#mobile-menu");
+const menuLinks = document.querySelector(".navbar__menu");
+
+menu.addEventListener('click', function(){
+    menu.classList.toggle('is-active');
+    menuLinks.classList.toggle('active');
+})
+
+// menuLinks.onclick = ()=> {
+//     menu.setTimeout = 500;
+//     console.log(document.getElementsByClassName('navbar__menu'));
+// }
+
 
 
 const text = ["web designer.","software developer.","Network designer.","freelancer."];   
@@ -47,5 +61,6 @@ let letter = "";
     setTimeout(dynamicText, 250);
 })();
 
-AOS.init();
+// AOS.init();
+
 

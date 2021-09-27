@@ -43,7 +43,6 @@ $orangeColor: #ff7200;
         height: 100vh;
         min-width: 100vw;
         position: fixed;
-        overflow: hidden;
 
         .background_banner{
             position: relative;
@@ -88,6 +87,7 @@ $orangeColor: #ff7200;
         max-height: 100vh;
         background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8));
         position: relative;
+        
 
         /*Nav bar*/
         .navbar {
@@ -201,12 +201,14 @@ $orangeColor: #ff7200;
     
     .content_section{
         width: 100vw;
-        max-height: 88vh;
+        max-height: 100vh;
         position: absolute;
         left: 0;
         top: 0;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
 
         section .image-banner{
             min-height: 88vh;
@@ -225,7 +227,7 @@ $orangeColor: #ff7200;
         position: absolute;
         display: inline-block;
         top: 30%;
-        left: 17vw;
+        left: 10vw;
         justify-content: center;
         align-items: center;
 
@@ -445,8 +447,7 @@ $orangeColor: #ff7200;
         flex-direction: column;
         color: #fff;
         background: transparent;
-        height: auto;
-        margin: 35px 10vh;
+        height: 100vh;
 
         h2{
             text-align: center;
@@ -839,12 +840,14 @@ $orangeColor: #ff7200;
     
     .content_section{
         width: 100vw;
-        max-height: 88vh;
+        max-height: 100vh;
         position: absolute;
         left: 0;
         top: 0;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
 
         section .image-banner{
             min-height: 88vh;
@@ -1473,12 +1476,14 @@ $orangeColor: #ff7200;
     
     .content_section{
         width: 100vw;
-        max-height: 88vh;
+        max-height: 100vh;
         position: absolute;
         left: 0;
         top: 0;
         display: flex;
         flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
 
         section .image-banner{
             min-height: 88vh;
@@ -2003,17 +2008,17 @@ $orangeColor: #ff7200;
             top: 0;
             left: 0;
             z-index: 9;
-            min-width: 100vw;
+            max-width: 100%;
             background: #000;
 
             .container{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                min-height: 100%;
-                min-width: 100vw;
+                max-height: 100%;
+                width: 100%;
                 margin: 0;
-                padding: 10px 50px;
+                // padding: 10px 50px;
                 z-index: 1;
                 
 
@@ -2037,15 +2042,38 @@ $orangeColor: #ff7200;
                     top: 1vh;
                     transform: translate(20%, 20%);
                 }
+                #mobile-menu{
+                    position: absolute;
+                    top: 20%;
+                    right: 5%;
+                    transform: translate(5%, 20%);
+                }
+
+                // The humbergur menu created in JS
+                #mobile-menu.is-active .bar:nth-child(2){
+                    opacity: 0;
+                }
+                #mobile-menu.is-active .bar:nth-child(1){
+                    transform: translateY(8px) rotate(225deg);
+                }
+                #mobile-menu.is-active .bar:nth-child(3){
+                    transform: translateY(-8px) rotate(-225deg);
+                }
 
                 .navbar__toggle{
                     .bar{
+                        display: block;
                         width: 25px;
                         height: 3px;
                         margin: 5px auto;
                         transition: all 0.3s ease-in-out;
                         background: #fff;
+                        cursor: pointer;
                     }
+                }
+                .navbar__toggle:hover{
+                    cursor: pointer;
+                    
                 }
                 
                 .navbar__menu{
@@ -2058,42 +2086,40 @@ $orangeColor: #ff7200;
                     position: absolute;
                     top: 12vh;
                     left: -100%;
-                    width: 100%;
+                    width: 100vw;
                     opacity: 0;
                     justify-content: center;
+                    transition: all 0.5s ease;
                     background: #000;
-                    z-index: 999;
 
-                    .active{
-                        background: #000;
-                        left: 0;
-                        opacity: 1;
-                        transition: 0.5s ease;
-                    }
+                    
             
                     .navbar_item{
                         height: 60px;
-                        width: auto;
-                        justify-content: space-between;
+                        max-width: 100%;
+                        justify-content: center;
                         align-items: center;
+                        
             
                         .navbar_links{
                             color: #fff;
-                            display: flex;
+                            display: flex; //table
                             text-align: center; 
+                            align-items: center;
                             text-decoration: none;
                             font-family: ubuntu;
                             font-size: 1.1em;
                             line-height: 60px;
-                            padding: 8px 0;
-                            min-width: 100vh;
+                            width: 100%;
+                            
                         }
             
                         .navbar_links:hover{
                             background: $orangeColor;
-                            transition: all .3s ease-in-out;
+                            transition: all .3s ease-out;
                             color: #fff;
-                            min-width: 100%;
+                            min-width: 100vw;
+                            
                         }
                     
                     }
@@ -2125,6 +2151,13 @@ $orangeColor: #ff7200;
                         
                     }    
                 }
+                .active{
+                    background: #000;
+                    left: 0;
+                    opacity: 1;
+                    transition: 0.5s ease;
+                }
+            
             
             }
         }
@@ -2135,12 +2168,14 @@ $orangeColor: #ff7200;
     
     .content_section{
         width: 100vw;
-        max-height: 88vh;
+        max-height: 100vh;
         position: absolute;
         left: 0;
         top: 0;
         display: flex;
         flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: scroll;
 
         section .image-banner{
             min-height: 88vh;
@@ -2278,13 +2313,18 @@ $orangeColor: #ff7200;
             text-transform: capitalize;
             font-size: 1.2em;
             word-spacing: 2px;
+            position: sticky;
+            background: transparent;
         }
 
         .service_offered{
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
-            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
             align-items: center;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            
 
             .flip-card {
                 background-color: transparent;
@@ -2292,6 +2332,7 @@ $orangeColor: #ff7200;
                 height: 60vh;
                 perspective: 1000px;
                 margin: 15px;
+                display: inline-block;
 
                 .flip-card-inner {
                     position: relative;
@@ -2385,7 +2426,7 @@ $orangeColor: #ff7200;
         background: transparent;
         width: 100%;
         position: absolute;
-        top: 4vh;
+        top: 0;
 
         h2{
             text-align: center;
