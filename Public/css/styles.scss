@@ -1371,26 +1371,26 @@ $orangeColor: #ff7200;
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 999;
-            min-width: 100vw;
+            z-index: 9;
+            max-width: 100%;
             background: #000;
 
             .container{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                min-height: 100%;
-                min-width: 100vw;
+                height: 12vh;
+                width: 100%;
                 margin: 0;
-                padding: 10px 50px;
+                // padding: 10px 50px;
                 z-index: 1;
                 
 
                 #navbar__logo{
                     background-color: $orangeColor;
                     font-family: 'Forte';
-                    line-height: 27px;
-                    letter-spacing: 2.2px;
+                    line-height: 16px;
+                    letter-spacing: 1px;
                     background-image: linear-gradient(to top, #f5630e 0%, #faf7f6 100%);
                     background-size: 100%;
                     -webkit-background-clip: text;
@@ -1400,41 +1400,91 @@ $orangeColor: #ff7200;
                     cursor: pointer;
                     text-decoration: none;
                     text-transform: capitalize;
-                    font-size: 1.8rem;
+                    font-size: 1.2rem;
                     position: fixed;
-                    left: 1.5vw;
-                    top: 1.5vh;
+                    left: 1vw;
+                    top: 1vh;
+                    transform: translate(20%, 20%);
+                }
+                #mobile-menu{
+                    position: absolute;
+                    top: 20%;
+                    right: 5%;
+                    transform: translate(20%, 20%);
+                }
+
+                // The humbergur menu created in JS
+                #mobile-menu.is-active .bar:nth-child(2){
+                    opacity: 0;
+                }
+                #mobile-menu.is-active .bar:nth-child(1){
+                    transform: translateY(8px) rotate(225deg);
+                }
+                #mobile-menu.is-active .bar:nth-child(3){
+                    transform: translateY(-8px) rotate(-225deg);
+                }
+
+                .navbar__toggle{
+                    .bar{
+                        display: block;
+                        width: 25px;
+                        height: 3px;
+                        margin: 5px auto;
+                        transition: all 0.3s ease-in-out;
+                        background: #fff;
+                        cursor: pointer;
+                    }
+                }
+                .navbar__toggle:hover{
+                    cursor: pointer;
+                    
                 }
                 
                 .navbar__menu{
                     display: flex;
-                    justify-content: flex-end;
+                    justify-content: center;
+                    flex-direction: column;
                     align-items: center;
-                    list-style: none;
+                    // display: grid;
+                    // grid-template-columns: auto;
+                    position: absolute;
+                    top: 15vh;
+                    left: -100vw;
+                    width: 70vw;
+                    opacity: 0;
+                    justify-content: center;
+                    transition: all 0.5s ease;
+                    background: #000;
+
                     
             
                     .navbar_item{
-                        height: 20px;
-                        width: auto;
-                        justify-content: space-between;
-                        align-items: center;
+                        height: 60px;
+                        width: 70vw;
+                        // justify-content: center;
+                        // align-items: center;
+                        
             
                         .navbar_links{
                             color: #fff;
-                            display: flex;
+                            display: flex; //table
+                            text-align: center; 
                             align-items: center;
-                            justify-content: center; 
                             text-decoration: none;
                             font-family: ubuntu;
                             font-size: 1.1em;
-                            height: 80%;
-                            margin-right: 2px;
-                            padding: 8px;
+                            line-height: 60px;
+                            width: 70vw;
+                            left: -1vw;
+                            
                         }
             
                         .navbar_links:hover{
-                            color: $orangeColor;
-                            transition: all .3s ease-in-out;
+                            background: $orangeColor;
+                            transition: all .3s ease-out;
+                            color: #fff;
+                            width: 70vw;
+                            
                         }
                     
                     }
@@ -1466,6 +1516,13 @@ $orangeColor: #ff7200;
                         
                     }    
                 }
+                .active{
+                    background: #000;
+                    left: 0;
+                    opacity: 1;
+                    transition: 0.5s ease;
+                }
+            
             
             }
         }
@@ -2015,10 +2072,10 @@ $orangeColor: #ff7200;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                max-height: 100%;
+                height: 12vh;
                 width: 100%;
                 margin: 0;
-                // padding: 10px 50px;
+                padding: 10px 50px;
                 z-index: 1;
                 
 
@@ -2046,7 +2103,7 @@ $orangeColor: #ff7200;
                     position: absolute;
                     top: 20%;
                     right: 5%;
-                    transform: translate(5%, 20%);
+                    transform: translate(20%, 20%);
                 }
 
                 // The humbergur menu created in JS
